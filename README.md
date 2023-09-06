@@ -64,13 +64,17 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 
 
 
-##tailwind css
+## tailwind cssを適応
 参考　https://tailwindcss.com/docs/guides/nuxtjs#3
 
+```bash
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init
+```
 
 >>nuxt.config.js
+
+```bash
 export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   postcss: {
@@ -81,9 +85,12 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: true }
 })
+```
 
 
 >>tailwind.config.js
+
+```bash
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -99,12 +106,16 @@ module.exports = {
   },
   plugins: [],
 }
+```
 
 
 >>assets\css\main.css を作成
+
+```bash
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+```
 
 起動
 npm run dev
