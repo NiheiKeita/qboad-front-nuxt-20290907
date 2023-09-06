@@ -61,3 +61,50 @@ yarn preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+
+
+##tailwind css
+参考　https://tailwindcss.com/docs/guides/nuxtjs#3
+
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init
+
+>>nuxt.config.js
+export default defineNuxtConfig({
+  css: ['~/assets/css/main.css'],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
+  devtools: { enabled: true }
+})
+
+
+>>tailwind.config.js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./components/**/*.{js,vue,ts}",
+    "./layouts/**/*.vue",
+    "./pages/**/*.vue",
+    "./plugins/**/*.{js,ts}",
+    "./nuxt.config.{js,ts}",
+    "./app.vue",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+
+>>assets\css\main.css を作成
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+起動
+npm run dev
