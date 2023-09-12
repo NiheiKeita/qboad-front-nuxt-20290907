@@ -7,5 +7,12 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  devtools: { enabled: true }
-})
+  app: {
+    head: {
+      title: 'Qboad',
+      meta: [{ name: 'description', content: 'Qboad Web' }],
+      link: [{ rel: 'icon', href: '/images/icon_web.png' }],
+    },
+  },
+  devtools: { enabled: true },
+});

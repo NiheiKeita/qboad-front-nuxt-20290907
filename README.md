@@ -62,9 +62,8 @@ yarn preview
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
 
-
-
 ## tailwind cssを適応
+
 参考　https://tailwindcss.com/docs/guides/nuxtjs#3
 
 ```bash
@@ -72,7 +71,7 @@ npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init
 ```
 
->>nuxt.config.js
+> > nuxt.config.js
 
 ```bash
 export default defineNuxtConfig({
@@ -87,8 +86,7 @@ export default defineNuxtConfig({
 })
 ```
 
-
->>tailwind.config.js
+> > tailwind.config.js
 
 ```bash
 /** @type {import('tailwindcss').Config} */
@@ -108,8 +106,7 @@ module.exports = {
 }
 ```
 
-
->>assets\css\main.css を作成
+> > assets\css\main.css を作成
 
 ```bash
 @tailwind base;
