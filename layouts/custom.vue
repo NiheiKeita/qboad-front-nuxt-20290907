@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="font-body">
     <nav>カスタムレイアウト</nav>
     <slot />
   </div>

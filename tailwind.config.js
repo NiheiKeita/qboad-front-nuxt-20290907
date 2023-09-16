@@ -13,6 +13,22 @@ module.exports = {
       colors: {
         ThemaColor: '#ffad5b',
         TexasRose: '#ffad5b',
+        ThemaColorComplementary: '#5badff',
+        ThemaColorInversion: '#0052a4',
+        ThemaColorHover: '#ffcea0',
+      },
+      fontFamily: {
+        body: [
+          'Hiragino Sans',
+          'ヒラギノ角ゴシック',
+          'メイリオ',
+          'Meiryo',
+          'MS Ｐゴシック',
+          'MS PGothic',
+          'sans-serif',
+          'YuGothic',
+          'Yu Gothic',
+        ],
       },
     },
   },

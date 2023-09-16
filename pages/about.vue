@@ -1,3 +1,9 @@
+<script setup language="ts">
+  definePageMeta({
+    layout: 'custom',
+  });
+</script>
+
 <template>
   <div>
     <h1>about</h1>
@@ -15,9 +21,3 @@
     <p class="mb-10 bg-black text-white">bg-black</p>
   </div>
 </template>
-
-<script setup language="ts">
-  definePageMeta({
-    layout: 'custom',
-  });
-</script>
