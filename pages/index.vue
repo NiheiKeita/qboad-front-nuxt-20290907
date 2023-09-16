@@ -12,7 +12,7 @@
     // show.value = true;
 
     return navigateTo({
-      path: routePathList('about'),
+      path: routePathList('register_input'),
     });
   };
 </script>

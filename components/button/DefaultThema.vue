@@ -19,7 +19,7 @@
       <div
         class="rounded-lg border border-ThemaColorComplementary bg-ThemaColor hover:bg-ThemaColorHover"
       >
-        <p class="mx-5 my-2 text-white">
+        <p class="mx-10 my-2 text-white">
           {{ msg }}
         </p>
       </div>

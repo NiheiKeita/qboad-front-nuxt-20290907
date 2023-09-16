@@ -4,6 +4,9 @@ export function routePathList(pathName: string) {
     case 'about':
       route = '/about';
       break;
+    case 'register_input':
+      route = '/register/input';
+      break;
     default:
       route = '/';
   }
