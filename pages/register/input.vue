@@ -1,27 +1,43 @@
-<script setup language="ts"></script>
+<script setup language="ts">
+  const handleClick = () => {
+    return navigateTo({
+      path: routePathList('register_complete'),
+    });
+  };
+  const inputChange = () => {};
+  const nameRef = ref('a');
+  const emailRef = ref('s');
+  const passwordRef = ref('f');
+</script>
 
 <template>
   <div>
     <div class="mt-10 flex items-center justify-center text-3xl font-bold">
       <p>新規登録</p>
+      <p>{{ emailRef }}</p>
     </div>
     <div class="flex items-center justify-center">
       <div class="w-1/3">
         <div class="mt-5 flex items-center justify-center">
-          <InputDefaultArea display="名前" name="name" @click="handleClick" />
-        </div>
-        <div class="mt-5 flex items-center justify-center">
           <InputDefaultArea
-            display="メールアドレス"
-            name="email"
-            @click="handleClick"
+            v-model="nameRef"
+            display="名前"
+            name="name"
+            @change-emit="inputChange"
           />
         </div>
         <div class="mt-5 flex items-center justify-center">
           <InputDefaultArea
+            v-model="emailRef"
+            display="メールアドレス"
+            name="email"
+          />
+        </div>
+        <div class="mt-5 flex items-center justify-center">
+          <InputDefaultArea
+            v-model="passwordRef"
             display="パスワード"
             name="password"
-            @click="handleClick"
           />
         </div>
         <ButtonDefaultThema

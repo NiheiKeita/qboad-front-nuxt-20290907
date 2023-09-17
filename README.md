@@ -53,3 +53,12 @@ module.exports = {
 
 起動
 npm run dev
+
+## input 使い方
+
+<InputDefaultArea
+v-model="｛｛初期の値｝｝"
+display="名前"
+name="name"
+@change-emit="｛｛inputが変更されたときに呼び出してほしい関数｝｝"
+/>
