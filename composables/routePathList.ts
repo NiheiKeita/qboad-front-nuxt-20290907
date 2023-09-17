@@ -10,6 +10,9 @@ export function routePathList(pathName: string) {
     case 'question_list':
       route = '/question/list';
       break;
+    case 'question_detail':
+      route = '/question/detail';
+      break;
     case 'serch_input':
       route = '/serch/input';
       break;

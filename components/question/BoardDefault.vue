@@ -5,23 +5,41 @@
   >
     <div class="flex justify-between">
       <div class="text-gray-100">時間</div>
-      <div>・・・</div>
+      <a href="javascript:void(0)">
+        <div>・・・</div>
+      </a>
     </div>
-    <div class="mt-5">問題の本文</div>
-    <div class="flex justify-end">二瓶より</div>
+    <nuxt-link
+      :to="routePathList('question_detail')"
+      class="inline-block w-full p-5"
+    >
+      <div class="mt-5">問題の本文</div>
+    </nuxt-link>
+    <nuxt-link
+      :to="routePathList('question_detail')"
+      class="inline-block w-full p-5"
+    >
+      <div class="flex justify-end">二瓶より</div>
+    </nuxt-link>
     <div class="flex justify-start space-x-10">
-      <div class="flex space-x-2">
-        <div>吹き出し</div>
-        <div>12</div>
-      </div>
-      <div class="flex space-x-2">
-        <div>賢い</div>
-        <div>22</div>
-      </div>
-      <div class="flex space-x-2">
-        <div>ハート</div>
-        <div>3</div>
-      </div>
+      <a href="javascript:void(0)">
+        <div class="flex space-x-2">
+          <div>吹き出し</div>
+          <div>12</div>
+        </div>
+      </a>
+      <a href="javascript:void(0)">
+        <div class="flex space-x-2">
+          <div>賢い</div>
+          <div>22</div>
+        </div>
+      </a>
+      <a href="javascript:void(0)">
+        <div class="flex space-x-2">
+          <div>ハート</div>
+          <div>3</div>
+        </div>
+      </a>
     </div>
     <div class="flex justify-end space-x-2">
       <div class="h-2 w-5 rounded-l-3xl rounded-r-md bg-yellow-400"></div>
