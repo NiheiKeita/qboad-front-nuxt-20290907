@@ -12,6 +12,10 @@
       type: String,
       default: '',
     },
+    type: {
+      type: String,
+      default: 'text',
+    },
   });
 
   const emits = defineEmits<{
@@ -34,6 +38,7 @@
       v-model="inputData"
       class="mt-2"
       :name="name"
+      :type="type"
       @change-emit="inputChange"
     />
   </div>

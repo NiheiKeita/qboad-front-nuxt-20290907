@@ -8,6 +8,10 @@
       type: String,
       default: 'input_value',
     },
+    type: {
+      type: String,
+      default: 'text',
+    },
   });
   const emits = defineEmits<{
     (e: 'update:modelValue', text: string): void;
@@ -24,7 +28,7 @@
   <div class="flex w-full items-center">
     <input
       class="w-full rounded-md border border-gray-400 p-2 outline-blue-200 focus:outline focus:outline-4"
-      type="text"
+      :type="type"
       :name="name"
       :value="modelValue"
       @input="onInputText"

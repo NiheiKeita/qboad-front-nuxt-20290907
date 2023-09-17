@@ -7,7 +7,8 @@
       </p>
     </div>
     <div class="flex items-center justify-center">
-      <img class="m-2 h-10" src="/images/icon_web.png" />
+      <!-- <img class="m-2 h-10" src="/images/icon_web.png" /> -->
+      <HambergerMenu />
     </div>
   </div>
 </template>
