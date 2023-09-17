@@ -18,6 +18,7 @@
     },
   });
 
+  // TODO(エラーメッセージ関連)
   const emits = defineEmits<{
     (e: 'update:modelValue', text: string): void;
     (e: 'change-emit'): void;

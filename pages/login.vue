@@ -1,5 +1,5 @@
 <script setup language="ts"></script>
 
 <template>
-  <div>マイページ</div>
+  <div>ログイン</div>
 </template>

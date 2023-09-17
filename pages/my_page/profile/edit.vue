@@ -1,5 +1,5 @@
 <script setup language="ts"></script>
 
 <template>
-  <div>マイページ</div>
+  <div>プロフィール修正</div>
 </template>

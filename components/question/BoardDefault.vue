@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  // TODO(問題表示)
+</script>
 <template>
   <div
     class="rounded-md border-8 border-BoardBorder bg-BoardBG px-2 pt-2 text-white shadow-[0_3px_10px_rgb(0,0,0,0.5)]"
@@ -10,13 +12,13 @@
       </a>
     </div>
     <nuxt-link
-      :to="routePathList('question_detail')"
+      :to="routePathList('question_detail', 1)"
       class="inline-block w-full p-5"
     >
       <div class="mt-5">問題の本文</div>
     </nuxt-link>
     <nuxt-link
-      :to="routePathList('question_detail')"
+      :to="routePathList('question_detail', 1)"
       class="inline-block w-full p-5"
     >
       <div class="flex justify-end">二瓶より</div>

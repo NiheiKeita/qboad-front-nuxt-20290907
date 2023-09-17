@@ -8,7 +8,7 @@
       emailRef.value === '' ||
       passwordRef.value === ''
     ) {
-      console.log('d');
+      // TODO(エラー表示)
     } else {
       return navigateTo({
         path: routePathList('register_complete'),
