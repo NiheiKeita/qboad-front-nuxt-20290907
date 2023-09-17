@@ -16,6 +16,8 @@ module.exports = {
         ThemaColorComplementary: '#5badff',
         ThemaColorInversion: '#0052a4',
         ThemaColorHover: '#ffcea0',
+        BoardBG: '#006633',
+        BoardBorder: '#b2771f',
       },
       fontFamily: {
         body: [
