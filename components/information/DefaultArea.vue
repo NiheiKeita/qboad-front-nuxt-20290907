@@ -3,18 +3,21 @@
 </script>
 
 <template>
-  <div class="relative flex w-full justify-between">
-    <div class="flex h-20 w-20 items-center justify-center">
-      <img src="/images/icon_web.png" />
-    </div>
-    <div class="flex h-20 w-20 items-center justify-center">
-      <img src="/images/icon_web.png" />
-    </div>
-    <div class="absolute flex h-20 items-center justify-center pe-20 ps-20">
-      <div class="">
-        <p>フォローされました</p>
-        <p>５時間前</p>
+  <div class="w-full justify-between">
+    <div class="relative flex w-full justify-between">
+      <div class="flex h-20 w-20 items-center justify-center">
+        <img src="/images/icon_web.png" />
+      </div>
+      <div class="flex h-20 w-20 items-center justify-center">
+        <img src="/images/icon_web.png" />
+      </div>
+      <div class="absolute flex h-20 items-center justify-center pe-20 ps-20">
+        <div class="">
+          <p>フォローされました</p>
+          <p>５時間前</p>
+        </div>
       </div>
     </div>
+    <div class="h-[0.5px] w-full bg-ThemaColorInversion opacity-10"></div>
   </div>
 </template>
