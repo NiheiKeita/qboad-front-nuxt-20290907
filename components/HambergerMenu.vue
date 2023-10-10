@@ -3,6 +3,9 @@
   const toggleStatus = () => {
     showMenu.value = !showMenu.value;
   };
+  const toggleClose = () => {
+    showMenu.value = false;
+  };
 </script>
 <template>
   <div class="">
@@ -40,6 +43,7 @@
           <nuxt-link
             :to="routePathList('question_list')"
             class="inline-block w-full p-5 text-white sm:hover:bg-gray-600"
+            @click="toggleClose"
             >問題一覧</nuxt-link
           >
         </li>
@@ -47,6 +51,7 @@
           <nuxt-link
             :to="routePathList('serch_input')"
             class="inline-block w-full p-5 text-white sm:hover:bg-gray-600"
+            @click="toggleClose"
             >検索</nuxt-link
           >
         </li>
@@ -54,6 +59,7 @@
           <nuxt-link
             :to="routePathList('information_list')"
             class="inline-block w-full p-5 text-white sm:hover:bg-gray-600"
+            @click="toggleClose"
             >お知らせ</nuxt-link
           >
         </li>
@@ -61,6 +67,7 @@
           <nuxt-link
             :to="routePathList('my_page')"
             class="inline-block w-full p-5 text-white sm:hover:bg-gray-600"
+            @click="toggleClose"
             >マイページ</nuxt-link
           >
         </li>

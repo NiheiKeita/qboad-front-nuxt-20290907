@@ -1,5 +1,12 @@
 <script setup lang="ts">
   // TODO(問題表示)
+  import { Question } from '@/types/question';
+  defineProps({
+    question: {
+      type: Object as () => Question,
+      default: null,
+    },
+  });
 </script>
 <template>
   <div
@@ -15,7 +22,7 @@
       :to="routePathList('question_detail', 1)"
       class="inline-block w-full p-5"
     >
-      <div class="mt-5">問題の本文</div>
+      <div class="mt-5">{{ question?.question_body }}</div>
     </nuxt-link>
     <nuxt-link
       :to="routePathList('question_detail', 1)"

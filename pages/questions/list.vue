@@ -1,16 +1,36 @@
 <script setup language="ts">
-  const items = ref([{ message: 'Foo' }, { message: 'Bar' }]);
   // TODO(問題表示)
+
+  const questions = [
+    {
+      id: 1,
+      name: '解答１',
+      question_title: 'question_title',
+      question_body: 'question_body',
+    },
+    {
+      id: 1,
+      name: '解答１',
+      question_title: 'question_title',
+      question_body: 'question_body',
+    },
+    {
+      id: 1,
+      name: '解答１',
+      question_title: 'question_title',
+      question_body: 'question_body',
+    },
+  ];
 </script>
 
 <template>
   <div>
     <div
-      v-for="(item, key) in items"
-      :key="key"
+      v-for="(question, i) in questions"
+      :key="i"
       class="my-4 flex items-center justify-center"
     >
-      <QuestionBoardDefault class="w-1/3" />
+      <QuestionBoardDefault class="w-1/3" :question="question" />
     </div>
   </div>
 </template>
