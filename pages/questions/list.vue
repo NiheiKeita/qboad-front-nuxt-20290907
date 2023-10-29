@@ -30,7 +30,7 @@
       :key="i"
       class="my-4 flex items-center justify-center"
     >
-      <QuestionBoardDefault class="w-1/3" :question="question" />
+      <QuestionBoardDefault class="w-4/5 md:w-1/3" :question="question" />
     </div>
   </div>
 </template>
