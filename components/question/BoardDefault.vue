@@ -22,7 +22,7 @@
     <div class="flex justify-between">
       <div class="text-gray-100">時間</div>
       <a href="javascript:void(0)">
-        <div>・・・</div>
+        <img class="h-5" src="/images/three_dots.svg" />
       </a>
     </div>
     <nuxt-link
