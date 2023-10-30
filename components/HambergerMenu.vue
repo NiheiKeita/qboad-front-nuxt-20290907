@@ -24,8 +24,8 @@
       </div>
     </div>
     <transition name="slide-fade" mode="out-in">
-      <div v-show="showMenu" class="fixed right-0 top-0 h-full w-1/4">
-        <ul class="h-full bg-black">
+      <div v-show="showMenu" class="fixed right-0 top-0 h-full w-1/2 md:w-1/4">
+        <ul class="relative z-20 h-full bg-black">
           <li class="flex h-20 items-center justify-end px-8">
             <div class="flex items-center justify-end text-white">
               <button
