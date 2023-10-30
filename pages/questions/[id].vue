@@ -19,7 +19,6 @@
 
 <template>
   <div>
-    <div>くいず詳細</div>
     <div>
       <div class="my-4 flex items-center justify-center">
         <QuestionBoardDefault class="w-4/5 md:w-1/3" :question="question" />
