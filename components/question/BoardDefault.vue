@@ -28,7 +28,7 @@
       <a href="javascript:void(0)" @click="threeDotsClick">
         <img class="h-5" src="/images/three_dots.svg" />
       </a>
-      <transition name="bounce" mode="out-in">
+      <transition name="slide-fade-up" mode="out-in">
         <div
           v-if="showThreeDotsMenu"
           class="absolute right-0 bg-white pb-3 pl-1 pr-3 pt-2"
@@ -124,5 +124,18 @@
     100% {
       transform: scale(1);
     }
+  }
+  .slide-fade-up-enter-active {
+    transition: all 0.3s ease-out;
+  }
+
+  .slide-fade-up-leave-active {
+    transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+  }
+
+  .slide-fade-up-enter-from,
+  .slide-fade-up-leave-to {
+    transform: translateY(-20px);
+    opacity: 0;
   }
 </style>
