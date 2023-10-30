@@ -62,3 +62,9 @@ display="名前"
 name="name"
 @change-emit="｛｛inputが変更されたときに呼び出してほしい関数｝｝"
 />
+
+## text size
+
+text-sm
+text-base
+text-lg

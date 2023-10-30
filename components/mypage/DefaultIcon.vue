@@ -4,6 +4,10 @@
       type: String,
       default: 'button',
     },
+    number: {
+      type: Number,
+      default: 0,
+    },
   });
   const emit = defineEmits(['click']);
 
@@ -14,15 +18,12 @@
 </script>
 
 <template>
-  <div class="flex items-center justify-center">
+  <div
+    class="flex h-24 w-24 items-center justify-center rounded-full bg-red-300"
+  >
     <a href="javascript:void(0)" @click="clickEvent">
-      <div
-        class="min-w-[200px] rounded-lg border border-ThemaColorComplementary bg-ThemaColor hover:bg-ThemaColorHover"
-      >
-        <p class="mx-10 my-2 flex justify-center text-lg text-white">
-          {{ msg }}
-        </p>
-      </div>
+      <div class="flex items-center justify-center">{{ number }}</div>
+      <div class="flex items-center justify-center">{{ msg }}</div>
     </a>
   </div>
 </template>

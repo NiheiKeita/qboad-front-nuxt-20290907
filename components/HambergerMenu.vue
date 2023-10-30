@@ -46,32 +46,48 @@
               :to="routePathList('question_list')"
               class="inline-block w-full p-5 text-white sm:hover:bg-gray-600"
               @click="toggleClose"
-              >問題一覧</nuxt-link
             >
+              <div class="flex items-center">
+                <img class="h-5" src="/images/brain.svg" />
+                <div class="ml-2 text-lg">問題一覧</div>
+              </div>
+            </nuxt-link>
           </li>
           <li class="">
             <nuxt-link
               :to="routePathList('serch_input')"
               class="inline-block w-full p-5 text-white sm:hover:bg-gray-600"
               @click="toggleClose"
-              >検索</nuxt-link
             >
+              <div class="flex items-center">
+                <img class="h-5" src="/images/magnifying_glass.svg" />
+                <div class="ml-2 text-lg">検索</div>
+              </div>
+            </nuxt-link>
           </li>
           <li class="">
             <nuxt-link
               :to="routePathList('information_list')"
               class="inline-block w-full p-5 text-white sm:hover:bg-gray-600"
               @click="toggleClose"
-              >お知らせ</nuxt-link
             >
+              <div class="flex items-center">
+                <img class="h-5" src="/images/bell.svg" />
+                <div class="ml-2 text-lg">お知らせ</div>
+              </div>
+            </nuxt-link>
           </li>
           <li class="">
             <nuxt-link
               :to="routePathList('my_page')"
               class="inline-block w-full p-5 text-white sm:hover:bg-gray-600"
               @click="toggleClose"
-              >マイページ</nuxt-link
             >
+              <div class="flex items-center">
+                <img class="h-5" src="/images/my_page.svg" />
+                <div class="ml-2 text-lg">マイページ</div>
+              </div>
+            </nuxt-link>
           </li>
         </ul>
       </div>

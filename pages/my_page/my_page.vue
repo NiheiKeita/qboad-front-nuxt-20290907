@@ -1,6 +1,6 @@
 <script setup language="ts">
   // TODO(問題表示)
-
+  const myId = 'keita1996';
   const questions = [
     {
       id: 1,
@@ -22,20 +22,75 @@
     },
   ];
   const select = ref('post');
-  const profileEditClick = () => {};
-  const createQuestionClick = () => {};
+  const profileEditClick = () => {
+    return navigateTo({
+      path: routePathList('profile_edit'),
+    });
+  };
+  const createQuestionClick = () => {
+    return navigateTo({
+      path: routePathList('question_create'),
+    });
+  };
+  const iconClick = (route) => {
+    if (route == null) {
+      return;
+    }
+    return navigateTo({
+      path: routePathList(route),
+    });
+  };
   const tabClick = (tabName) => {
     console.log(tabName);
     select.value = tabName;
+  };
+  const copy = (value) => {
+    const textCode = value;
+    navigator.clipboard.writeText(textCode);
+    alert('”' + textCode + '” をコピーしました');
+    // copytoClipboarad(textCode);
   };
 </script>
 
 <template>
   <div class="md:mx-[20%]">
-    <div class="my-4 flex items-center justify-center">マイページ</div>
-    <div class="my-4 flex items-center justify-center">フォロワーとか</div>
-    <div class="my-4 flex items-center justify-center">ID</div>
-    <div class="my-4 flex items-center justify-evenly">
+    <div class="my-4 flex items-center justify-center text-base">
+      <div class="flex w-2/5 items-center justify-center">
+        <div>
+          <img class="h-16 w-16" src="/images/magnifying_glass.svg" />
+          <div class="mt-3 flex items-center justify-center">nihei</div>
+        </div>
+      </div>
+      <div class="w-3/5">
+        <div class="flex items-center justify-evenly">
+          <MypageDefaultIcon msg="投稿" number="1" @click="iconClick()" />
+          <MypageDefaultIcon msg="いいね" number="1" @click="iconClick()" />
+          <MypageDefaultIcon msg="解答" number="1" @click="iconClick()" />
+        </div>
+        <div class="mt-4 flex items-center justify-evenly">
+          <MypageDefaultIcon
+            msg="フォロワー"
+            number="1"
+            @click="iconClick('followers')"
+          />
+          <MypageDefaultIcon
+            msg="フォロー中"
+            number="1"
+            @click="iconClick('follows')"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="my-2 ms-4 flex items-center justify-start">
+      <a
+        href="javascript:void(0)"
+        class="text-sm text-blue-700"
+        @click="copy('@' + myId)"
+      >
+        @{{ myId }}</a
+      >
+    </div>
+    <div class="my-2 flex items-center justify-evenly">
       <ButtonDefaultThema
         msg="プロフィールを編集する"
         @click="profileEditClick"

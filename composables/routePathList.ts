@@ -16,6 +16,9 @@ export function routePathList(pathName: String, id = 0) {
     case 'question_detail':
       route = '/questions/' + id;
       break;
+    case 'question_create':
+      route = '/questions/create';
+      break;
     case 'serch_input':
       route = '/serch/input';
       break;
@@ -28,8 +31,14 @@ export function routePathList(pathName: String, id = 0) {
     case 'my_page':
       route = '/my_page/my_page';
       break;
+    case 'followers':
+      route = '/my_page/followers';
+      break;
+    case 'follows':
+      route = '/my_page/follows';
+      break;
     case 'profile_edit':
-      route = '/my_page/profile_edit/edit';
+      route = '/my_page/profile/edit';
       break;
     default:
       route = '/';

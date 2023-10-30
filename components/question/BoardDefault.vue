@@ -24,7 +24,7 @@
     class="rounded-md border-8 border-BoardBorder bg-BoardBG px-2 pt-2 text-white shadow-[0_3px_10px_rgb(0,0,0,0.5)]"
   >
     <div class="relative flex justify-between">
-      <div class="text-gray-100">時間</div>
+      <div class="text-sm text-gray-100">時間</div>
       <a href="javascript:void(0)" @click="threeDotsClick">
         <img class="h-5" src="/images/three_dots.svg" />
       </a>
@@ -50,15 +50,17 @@
                 </div>
               </li>
               <li class="mt-2 px-1">
-                <a class="text-black" href="#">マイリストに登録する</a>
+                <a class="text-base text-black" href="#"
+                  >マイリストに登録する</a
+                >
               </li>
               <li class="h-[1px] w-full bg-cyan-500"></li>
               <li class="px-1">
-                <a class="text-black" href="#">フォローする</a>
+                <a class="text-base text-black" href="#">フォローする</a>
               </li>
               <li class="h-[1px] w-full bg-cyan-500"></li>
               <li class="px-1">
-                <a class="text-black" href="#">ブロックする</a>
+                <a class="text-base text-black" href="#">ブロックする</a>
               </li>
               <li class="h-[1px] w-full bg-cyan-500"></li>
             </ul>
@@ -70,25 +72,25 @@
       :to="routePathList('question_detail', 1)"
       class="inline-block w-full p-5"
     >
-      <div class="mt-5">{{ question?.question_body }}</div>
+      <div class="mt-5 text-base">{{ question?.question_body }}</div>
     </nuxt-link>
     <nuxt-link
       :to="routePathList('question_detail', 1)"
       class="inline-block w-full p-5"
     >
-      <div class="flex justify-end">二瓶より</div>
+      <div class="flex justify-end text-base">二瓶より</div>
     </nuxt-link>
     <div class="flex justify-start space-x-10">
       <a href="javascript:void(0)">
         <div class="flex space-x-2">
           <img class="h-5" src="/images/balloon.svg" />
-          <div>12</div>
+          <div class="text-sm">12</div>
         </div>
       </a>
       <a href="javascript:void(0)">
         <div class="flex space-x-2">
           <img class="h-5" src="/images/bulb.svg" />
-          <div>22</div>
+          <div class="text-sm">22</div>
         </div>
       </a>
       <a href="javascript:void(0)" @click="heartClick">
@@ -97,7 +99,7 @@
             <img v-if="myHeart" class="h-5" src="/images/heart_white.svg" />
             <img v-else class="h-5" src="/images/heart_black.svg" />
           </transition>
-          <div>3</div>
+          <div class="text-sm">3</div>
         </div>
       </a>
     </div>

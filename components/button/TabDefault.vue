@@ -23,7 +23,9 @@
     :class="select ? 'bg-red-500' : 'bg-blue-500'"
   >
     <a href="javascript:void(0)" @click="clickEvent()">
-      <div class="flex h-full w-full items-center justify-center text-center">
+      <div
+        class="flex h-full w-full items-center justify-center text-center text-lg text-white"
+      >
         {{ msg }}
       </div>
     </a>
