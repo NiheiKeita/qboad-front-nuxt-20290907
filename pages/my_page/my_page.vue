@@ -1,21 +1,25 @@
-<script setup language="ts">
+<script setup lang="ts">
   // TODO(問題表示)
+  import { Question } from '@/types/question';
   const myId = 'keita1996';
-  const questions = [
+  const questions: Array<Question> = [
     {
       id: 1,
+      created_at: formatDate(Date.now()),
       name: '解答１',
       question_title: 'question_title',
       question_body: 'question_body',
     },
     {
       id: 1,
+      created_at: formatDate(Date.now()),
       name: '解答１',
       question_title: 'question_title',
       question_body: 'question_body',
     },
     {
       id: 1,
+      created_at: formatDate(Date.now()),
       name: '解答１',
       question_title: 'question_title',
       question_body: 'question_body',
@@ -32,7 +36,7 @@
       path: routePathList('question_create'),
     });
   };
-  const iconClick = (route) => {
+  const iconClick = (route: string) => {
     if (route == null) {
       return;
     }
@@ -40,11 +44,11 @@
       path: routePathList(route),
     });
   };
-  const tabClick = (tabName) => {
+  const tabClick = (tabName: string) => {
     console.log(tabName);
     select.value = tabName;
   };
-  const copy = (value) => {
+  const copy = (value: string) => {
     const textCode = value;
     navigator.clipboard.writeText(textCode);
     alert('”' + textCode + '” をコピーしました');
@@ -63,9 +67,9 @@
       </div>
       <div class="w-3/5">
         <div class="flex items-center justify-evenly">
-          <MypageDefaultIcon msg="投稿" number="1" @click="iconClick()" />
-          <MypageDefaultIcon msg="いいね" number="1" @click="iconClick()" />
-          <MypageDefaultIcon msg="解答" number="1" @click="iconClick()" />
+          <MypageDefaultIcon msg="投稿" number="1" />
+          <MypageDefaultIcon msg="いいね" number="1" />
+          <MypageDefaultIcon msg="解答" number="1" />
         </div>
         <div class="mt-4 flex items-center justify-evenly">
           <MypageDefaultIcon

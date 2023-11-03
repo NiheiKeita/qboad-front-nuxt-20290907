@@ -1,4 +1,4 @@
-<script setup language="ts">
+<script setup lang="ts">
   const nameRef = ref('');
   const emailRef = ref('');
   const passwordRef = ref('');

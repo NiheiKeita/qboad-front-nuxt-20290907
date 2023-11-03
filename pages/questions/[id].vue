@@ -1,19 +1,23 @@
-<script setup language="ts">
+<script setup lang="ts">
   // TODO(問題表示)
-  const answerButtonClick = (isCorrect) => {
+  import { Answer } from '@/types/answer';
+  import { Question } from '@/types/question';
+  const answerButtonClick = (isCorrect: boolean) => {
     // TODO(解答正誤処理)
     console.log(isCorrect);
   };
-  const question = {
+  // const question: ref<Question> = ref(1, 2, 3, 4, 5);
+  const question: Question = {
     id: 1,
+    created_at: formatDate(Date.now()),
     name: '解答１',
     question_title: 'question_title',
     question_body: 'question_body',
   };
-  const ansers = [
-    { id: 1, name: '解答１', is_correct: 1 },
-    { id: 2, name: '解答２', is_correct: 0 },
-    { id: 3, name: '解答３', is_correct: 0 },
+  const ansers: Array<Answer> = [
+    { id: 1, name: '解答１', is_correct: true },
+    { id: 2, name: '解答２', is_correct: false },
+    { id: 3, name: '解答３', is_correct: false },
   ];
 </script>
 
@@ -35,10 +39,7 @@
     </div>
     <div>
       <nuxt-link :to="routePathList('question_list')">
-        <ButtonDefaultThema
-          class="my-2 mt-10"
-          msg="一覧へ戻る"
-          @click="registerButtonClick"
+        <ButtonDefaultThema class="my-2 mt-10" msg="一覧へ戻る"
       /></nuxt-link>
     </div>
   </div>

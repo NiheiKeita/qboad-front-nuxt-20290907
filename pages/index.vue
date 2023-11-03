@@ -1,4 +1,4 @@
-<script setup language="ts">
+<script setup lang="ts">
   const handleClick = () => {
     console.log('nihei'); // eslint-disable-line no-console
     return navigateTo({

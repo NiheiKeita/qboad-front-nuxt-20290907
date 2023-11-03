@@ -1,4 +1,4 @@
-<script setup language="ts"></script>
+<script setup lang="ts"></script>
 
 <template>
   <div>お知らせ詳細</div>

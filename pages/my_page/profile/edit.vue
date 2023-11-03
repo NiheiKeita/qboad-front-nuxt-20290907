@@ -1,4 +1,4 @@
-<script setup language="ts"></script>
+<script setup lang="ts"></script>
 
 <template>
   <div>プロフィール修正</div>

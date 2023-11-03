@@ -1,4 +1,4 @@
-<script setup language="ts"></script>
+<script setup lang="ts"></script>
 
 <template>
   <div>フォロー一覧</div>
