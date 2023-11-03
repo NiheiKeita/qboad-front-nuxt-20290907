@@ -1,7 +1,18 @@
 <script setup lang="ts">
   // TODO(問題表示)
   import { Question } from '@/types/question';
+  import { User } from '@/types/user';
   const myId = 'keita1996';
+  const user: User = {
+    id: 1,
+    created_at: formatDate(Date.now()),
+    name: 'nihei',
+    posts_number: 1,
+    likes_number: 2,
+    answers_number: 3,
+    followers_number: 44,
+    follows_number: 555,
+  };
   const questions: Array<Question> = [
     {
       id: 1,
@@ -67,19 +78,19 @@
       </div>
       <div class="w-3/5">
         <div class="flex items-center justify-evenly">
-          <MypageDefaultIcon msg="投稿" number="1" />
-          <MypageDefaultIcon msg="いいね" number="1" />
-          <MypageDefaultIcon msg="解答" number="1" />
+          <MypageDefaultIcon msg="投稿" :num="user.posts_number" />
+          <MypageDefaultIcon msg="いいね" :num="user.likes_number" />
+          <MypageDefaultIcon msg="解答" :num="user.answers_number" />
         </div>
         <div class="mt-4 flex items-center justify-evenly">
           <MypageDefaultIcon
             msg="フォロワー"
-            number="1"
+            :num="user.followers_number"
             @click="iconClick('followers')"
           />
           <MypageDefaultIcon
             msg="フォロー中"
-            number="1"
+            :num="user.follows_number"
             @click="iconClick('follows')"
           />
         </div>

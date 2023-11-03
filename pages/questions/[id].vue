@@ -2,11 +2,10 @@
   // TODO(問題表示)
   import { Answer } from '@/types/answer';
   import { Question } from '@/types/question';
-  const answerButtonClick = (isCorrect: boolean) => {
+  const answerButtonClick = (isCorrect: Boolean) => {
     // TODO(解答正誤処理)
     console.log(isCorrect);
   };
-  // const question: ref<Question> = ref(1, 2, 3, 4, 5);
   const question: Question = {
     id: 1,
     created_at: formatDate(Date.now()),
@@ -14,7 +13,7 @@
     question_title: 'question_title',
     question_body: 'question_body',
   };
-  const ansers: Array<Answer> = [
+  const answers: Array<Answer> = [
     { id: 1, name: '解答１', is_correct: true },
     { id: 2, name: '解答２', is_correct: false },
     { id: 3, name: '解答３', is_correct: false },
@@ -29,17 +28,17 @@
       </div>
     </div>
     <div class="mt-10">
-      <div v-for="(anser, i) in ansers" :key="i">
+      <div v-for="(answer, i) in answers" :key="i">
         <ButtonDefaultThema
           class="my-2"
-          :msg="anser.name"
-          @click="answerButtonClick(anser.is_correct)"
+          :msg="answer.name"
+          @click="answerButtonClick(answer.is_correct)"
         />
       </div>
     </div>
     <div>
       <nuxt-link :to="routePathList('question_list')">
-        <ButtonDefaultThema class="my-2 mt-10" msg="一覧へ戻る"
+        <ButtonDefaultThema class="my-2 mt-10" :msg="question.name"
       /></nuxt-link>
     </div>
   </div>
