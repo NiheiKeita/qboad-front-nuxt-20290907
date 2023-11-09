@@ -68,3 +68,7 @@ name="name"
 text-sm
 text-base
 text-lg
+
+## 参考
+
+https://qlitre-weblog.com/django-nuxt3-blog
