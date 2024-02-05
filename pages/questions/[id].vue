@@ -1,35 +1,25 @@
 <script setup lang="ts">
-  // TODO(問題表示)
-  import { Answer } from '@/types/answer';
   import { Question } from '@/types/question';
-  const answer = ref();
+  const isAnswerCorrent = ref();
   const hasAnswered = ref(false);
   const isShowAnswerImage = ref(false);
   const answerButtonClick = (isCorrect: Boolean) => {
-    // TODO(解答正誤処理)
     if (hasAnswered.value) {
       return;
     }
     hasAnswered.value = true;
-    answer.value = isCorrect;
+    isAnswerCorrent.value = isCorrect;
     isShowAnswerImage.value = true;
-    console.log(isCorrect);
   };
   const hideAnswerImage = () => {
     isShowAnswerImage.value = false;
   };
-  const question: Question = {
-    id: 1,
-    created_at: formatDate(Date.now()),
-    name: '解答１',
-    question_title: 'question_title',
-    question_body: 'question_body',
-  };
-  const answers: Array<Answer> = [
-    { id: 1, name: '解答１', is_correct: true },
-    { id: 2, name: '解答２', is_correct: false },
-    { id: 3, name: '解答３', is_correct: false },
-  ];
+  const question: Question = testQuestion();
+  // const answers: Array<Answer> = [
+  //   { id: 1, name: '解答１', is_correct: true },
+  //   { id: 2, name: '解答２', is_correct: false },
+  //   { id: 3, name: '解答３', is_correct: false },
+  // ];
 </script>
 
 <template>
@@ -40,11 +30,11 @@
       </div>
     </div>
     <div class="mt-10">
-      <div v-for="(answer, i) in answers" :key="i">
+      <div v-for="(answer, i) in question?.answers" :key="i">
         <ButtonDefaultThema
           class="my-2"
-          :msg="answer.name"
-          @click="answerButtonClick(answer.is_correct)"
+          :msg="answer?.name"
+          @click="answerButtonClick(answer?.is_correct)"
         />
       </div>
     </div>
@@ -57,8 +47,11 @@
       <div
         class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40"
       >
-        <img v-if="answer == true" src="/images/solve_correct.png" />
-        <img v-if="answer == false" src="/images/solve_incorrect.png" />
+        <img v-if="isAnswerCorrent == true" src="/images/solve_correct.png" />
+        <img
+          v-if="isAnswerCorrent == false"
+          src="/images/solve_incorrect.png"
+        />
       </div>
     </transition>
   </div>

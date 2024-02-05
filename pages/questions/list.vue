@@ -1,30 +1,8 @@
 <script setup lang="ts">
-  // TODO(問題表示)
+  // TODO:問題一覧APIをたたく
   import { Question } from '@/types/question';
 
-  const questions: Array<Question> = [
-    {
-      id: 1,
-      created_at: formatDate(Date.now()),
-      name: '解答１',
-      question_title: '算数の問題',
-      question_body: '1+1は？',
-    },
-    {
-      id: 1,
-      created_at: formatDate(Date.now()),
-      name: '解答１',
-      question_title: 'question_title',
-      question_body: 'question_body',
-    },
-    {
-      id: 1,
-      created_at: formatDate(Date.now()),
-      name: '解答１',
-      question_title: 'question_title',
-      question_body: 'question_body',
-    },
-  ];
+  const questions: Array<Question> = testQuestions();
 </script>
 
 <template>

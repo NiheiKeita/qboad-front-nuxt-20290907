@@ -1,6 +1,6 @@
 <script setup lang="ts">
-  // TODO(問題表示)
   import { Question } from '@/types/question';
+  // TODO(問題表示)
   import { User } from '@/types/user';
   const myId = 'keita1996';
   const user: User = {
@@ -13,29 +13,7 @@
     followers_number: 44,
     follows_number: 555,
   };
-  const questions: Array<Question> = [
-    {
-      id: 1,
-      created_at: formatDate(Date.now()),
-      name: '解答１',
-      question_title: 'question_title',
-      question_body: 'question_body',
-    },
-    {
-      id: 1,
-      created_at: formatDate(Date.now()),
-      name: '解答１',
-      question_title: 'question_title',
-      question_body: 'question_body',
-    },
-    {
-      id: 1,
-      created_at: formatDate(Date.now()),
-      name: '解答１',
-      question_title: 'question_title',
-      question_body: 'question_body',
-    },
-  ];
+  const questions: Array<Question> = testQuestions();
   const select = ref('post');
   const profileEditClick = () => {
     return navigateTo({
