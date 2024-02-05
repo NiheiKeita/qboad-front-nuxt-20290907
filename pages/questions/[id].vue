@@ -2,9 +2,21 @@
   // TODO(問題表示)
   import { Answer } from '@/types/answer';
   import { Question } from '@/types/question';
+  const answer = ref();
+  const hasAnswered = ref(false);
+  const isShowAnswerImage = ref(false);
   const answerButtonClick = (isCorrect: Boolean) => {
     // TODO(解答正誤処理)
+    if (hasAnswered.value) {
+      return;
+    }
+    hasAnswered.value = true;
+    answer.value = isCorrect;
+    isShowAnswerImage.value = true;
     console.log(isCorrect);
+  };
+  const hideAnswerImage = () => {
+    isShowAnswerImage.value = false;
   };
   const question: Question = {
     id: 1,
@@ -38,8 +50,16 @@
     </div>
     <div>
       <nuxt-link :to="routePathList('question_list')">
-        <ButtonDefaultThema class="my-2 mt-10" :msg="question.name"
-      /></nuxt-link>
+        <ButtonDefaultThema class="my-2 mt-10" msg="一覧へ戻る" />
+      </nuxt-link>
     </div>
+    <transition v-if="isShowAnswerImage" @click="hideAnswerImage">
+      <div
+        class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40"
+      >
+        <img v-if="answer == true" src="/images/solve_correct.png" />
+        <img v-if="answer == false" src="/images/solve_incorrect.png" />
+      </div>
+    </transition>
   </div>
 </template>

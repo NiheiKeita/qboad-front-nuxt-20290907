@@ -7,8 +7,8 @@
       id: 1,
       created_at: formatDate(Date.now()),
       name: '解答１',
-      question_title: 'question_title',
-      question_body: 'question_body',
+      question_title: '算数の問題',
+      question_body: '1+1は？',
     },
     {
       id: 1,

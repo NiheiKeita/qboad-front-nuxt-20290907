@@ -78,7 +78,7 @@
       :to="routePathList('question_detail', 1)"
       class="inline-block w-full p-5"
     >
-      <div class="flex justify-end text-base">二瓶より</div>
+      <div class="flex justify-end text-sm">二瓶より</div>
     </nuxt-link>
     <div class="flex justify-start space-x-10">
       <a href="javascript:void(0)">
